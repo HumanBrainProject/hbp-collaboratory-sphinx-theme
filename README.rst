@@ -6,11 +6,11 @@
 .. _grunt: http://www.gruntjs.com
 .. _node: http://www.nodejs.com
 .. _demo: https://collab.humanbrainproject.eu/#/collab/54/nav/368
-.. _repository: https://bbpcode.epfl.ch/code/#/admin/projects/platform/hbp/collaboratory-sphinx-theme
+.. _repository: https://github.com/HumanBrainProject/hbp-collaboratory-sphinx-theme
 
-**************************
-Collaboratory Sphinx Theme
-**************************
+******************************
+HBP Collaboratory Sphinx Theme
+******************************
 
 .. contents::
 
@@ -32,35 +32,35 @@ Download the package or add it to your ``requirements.txt`` file:
 
 .. code:: bash
 
-    $ pip install collaboratory_sphinx_theme -i http://bbpgb019.epfl.ch:9090/simple
+    $ pip install hbp_collaboratory_sphinx_theme
 
 In your ``conf.py`` file:
 
 .. code:: python
 
-    import collaboratory_sphinx_theme
+    import hbp_collaboratory_sphinx_theme
 
-    html_theme = "collaboratory_sphinx_theme"
+    html_theme = "hbp_collaboratory_sphinx_theme"
 
-    html_theme_path = [collaboratory_sphinx_theme.get_html_theme_path()]
+    html_theme_path = [hbp_collaboratory_sphinx_theme.get_html_theme_path()]
 
 Via git or download
 -------------------
 
 Symlink or subtree the repository_ into your documentation at
-``docs/_themes/collaboratory_sphinx_theme`` then add the following two settings to your Sphinx
+``docs/_themes/hbp_collaboratory_sphinx_theme`` then add the following two settings to your Sphinx
 conf.py file:
 
 .. code:: python
 
-    html_theme = "collaboratory_sphinx_theme"
+    html_theme = "hbp_collaboratory_sphinx_theme"
     html_theme_path = ["_themes", ]
 
 
 Contributing or modifying the theme
 ===================================
 
-The collaboratory_sphinx_theme is primarily a sass_ project that requires a few
+The hbp_collaboratory_sphinx_theme is primarily a sass_ project that requires a few
 other sass libraries. We are using bower_ to manage these dependencies and sass_
 to build the css. The good news is I have a very nice set of grunt_ operations
 that will not only load these dependecies, but watch for changes, rebuild the

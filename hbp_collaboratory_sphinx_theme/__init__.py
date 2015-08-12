@@ -1,6 +1,6 @@
 import os
 
-from collaboratory_sphinx_theme.version import __version__
+from hbp_collaboratory_sphinx_theme.version import __version__
 
 
 def get_html_theme_path():
