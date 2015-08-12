@@ -9,7 +9,7 @@ module.exports = function (grunt) {
 
     var pathConfig = {
         htmlsrc: 'assets',
-        dest: 'collaboratory_sphinx_theme/static'
+        dest: 'hbp_collaboratory_sphinx_theme/static'
     };
 
     var relativePath = function(p) {
@@ -27,7 +27,7 @@ module.exports = function (grunt) {
           options: {
             files: ['bower.json', 'package.json'],
             updateConfigs: ['pkg'],
-            commitFiles: ['bower.json', 'package.json', 'collaboratory_sphinx_theme/version.py'],
+            commitFiles: ['bower.json', 'package.json', 'hbp_collaboratory_sphinx_theme/version.py'],
             pushTo: 'origin HEAD:master'
           }
         },
@@ -38,7 +38,7 @@ module.exports = function (grunt) {
                 prefix: '__version__ = \''
             },
             versionPy: {
-              src: ['collaboratory_sphinx_theme/version.py']
+              src: ['hbp_collaboratory_sphinx_theme/version.py']
             }
         },
 
@@ -176,14 +176,14 @@ module.exports = function (grunt) {
           pythonPublish: [
             'venv/bin/devpi use http://bbpgb019.epfl.ch:3141/bbprelman/release',
             'venv/bin/devpi login bbprelman --password a',
-            'venv/bin/devpi upload dist/collaboratory_sphinx_theme-<%= pkg.version %>.tar.gz'
+            'venv/bin/devpi upload dist/hbp_collaboratory_sphinx_theme-<%= pkg.version %>.tar.gz'
           ].join(' && '),
           buildDoc: 'venv/bin/sphinx-build doc build/doc'
         },
 
         publishDoc: {
           doc: {
-            name: 'Collaboratory Sphinx Theme',
+            name: 'HBP Collaboratory Sphinx Theme',
             description: 'The HBP official Sphinx theme',
             version: '<%= pkg.version %>'
           }
